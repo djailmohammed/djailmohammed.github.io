@@ -27,40 +27,40 @@ body {
 
     background:
         repeating-linear-gradient(
-            rgba(43, 43, 43, 0.3),
-            rgba(43, 43, 43, 0.3) 1px,
-            transparent 1px,
-            transparent 25px
+            rgba(50, 50, 50, 0.2),
+            rgba(50, 50, 50, 0.2) 1px,
+            transparent 2px,
+            transparent 50px
         ),
         repeating-linear-gradient(
             to right,
-            rgba(43, 43, 43, 0.3),
-            rgba(43, 43, 43, 0.3) 1px,
-            transparent 1px,
-            transparent 25px
+            rgba(50, 50, 50, 0.2),
+            rgba(50, 50, 50, 0.2) 1px,
+            transparent 2px,
+            transparent 50px
         )
     var(--bg);
 }
 
-/* Hero section */
+    .main-column {
+    max-width: 400px;
+    width: 100%;
+    padding: 1.5rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+    /* Hero section */
     .hero {
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
+        width: 100%;
     }
 
     /** Header with name and toggle switch */
         .hero-header {
-            position: absolute;
-            top: 1rem;
-            left: 0;
-            width: 100%;
             display: flex;
             justify-content: space-between;
-            padding: 1rem 1rem;
+            margin-top: 2rem;
             color: var(--text);
         }
 
@@ -82,11 +82,16 @@ body {
             font-weight: bold;
         }
 
+        .title {
+            margin-left: 0;
+            text-align: left;
+        }
+
         /* Info section with icons below */
         .hero-info {
             text-align: left;
-            max-width: 300px;
-            margin-top: 1rem;
+            margin-top: 3rem;
+            width: 100%;
         }
             /* Bold role in the info section*/
             .text-role {
@@ -111,8 +116,8 @@ body {
 
 /* Profile picture */
     .profile-pic {
-    width: 150px;              
-    height: 150px;
+    width: 220px;              
+    height: 220px;
     border-radius: 50%;        
     border: 4px solid var(--accent);
     overflow: hidden;
@@ -121,6 +126,7 @@ body {
     align-items: center;
     box-shadow: 0 0 15px rgba(255, 76, 109, 0.5); /* glow effect */
     margin: 2rem auto;
+    margin-top: 10rem;
     }
 
 /* Link social icons */
@@ -171,14 +177,15 @@ body {
         margin-left: 0rem;
     }
 
-    .skills {
+    .container {
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
-        margin: 2rem;
+        margin-top: 10rem;
     }
 
     .skill-box {
+        width: 100%;
         background-color: var(--surface);
         border: 2px solid var(--accent);
         border-radius: 15px;
@@ -222,6 +229,23 @@ body {
         color: var(--text);
     }
 
+
+
+/*Projects section*/
+    .projects {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-top: 10rem;
+    }
+
+    .project-box {
+        width: 100%;
+    }
+
+
+
+
 /*Footer*/
     footer {
         width: 100%;
@@ -242,16 +266,35 @@ body {
 
 
 
-@media (min-width: 768px) {
-    /* Tablet styles */
-    nav ul {
-    display: flex;
-    gap: 1rem;
+@media (min-width: 825px) {
+    .main-column {
+        max-width: 800px;
     }
-    
-    main {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+
+    .profile-pic {
+        width: 250px;
+        height: 250px;
+        margin-top: 0rem;
+        margin-right: 3rem;
+    }
+
+    .container {
+        margin-top: 6rem;
+        width: 100%;
+    }
+
+    .hero-content {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        margin-top: 8rem;
+    }
+
+    .hero-info {
+        margin-top: -2rem;
+        width: auto;
+        flex: 1;
     }
 }
 
