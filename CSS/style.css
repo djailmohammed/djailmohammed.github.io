@@ -311,20 +311,13 @@ body {
 .timeline-item {
     position: relative;
     display: flex;
+    flex-direction: column;
     align-items: flex-start;
     gap: 1.5rem;
 }
 
 .timeline-dot {
-    position: absolute;
-    left: -1.05rem;
-    top: 0.5rem;
-    width: 15px;
-    height: 15px;
-    background: var(--accent);
-    border-radius: 50%;
-    box-shadow: 0 0 10px rgba(255, 76, 109, 0.18);
-    border: 3px solid var(--surface);
+    display: none;
 }
 
 .timeline-date {
@@ -333,6 +326,8 @@ body {
     color: var(--text-secondary);
     font-size: 1rem;
     margin-top: 0.2rem;
+    margin-bottom: 0.8rem;
+    text-align: left;
 }
 
 .timeline-content {
@@ -412,6 +407,50 @@ body {
         margin-top: -2rem;
         width: auto;
         flex: 1;
+    }
+
+    .timeline {
+        padding-left: 2rem;
+        border-left: 3px solid var(--accent);
+        gap: 2.5rem;
+    }
+
+    .timeline-item {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+
+    .timeline-dot {
+        display: block;
+        position: absolute;
+        left: -1.05rem;
+        top: 0.5rem;
+        width: 15px;
+        height: 15px;
+        background: var(--accent);
+        border-radius: 50%;
+        box-shadow: 0 0 10px rgba(255, 76, 109, 0.18);
+        border: 3px solid var(--surface);
+    }
+
+    .timeline-content {
+        background: var(--surface);
+        padding: 1.1rem 1.5rem;
+        border-radius: 12px;
+        box-shadow: 0 2px 12px rgba(43, 43, 43, 0.08);
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .timeline-date {
+        position: static;
+        min-width: 110px;
+        font-size: 1rem;
+        margin-top: 0.2rem;
+        margin-bottom: 0.3rem;
+        order: -1; /* place date before content if you want, or remove to keep in place */
     }
 
     
