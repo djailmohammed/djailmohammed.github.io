@@ -1,0 +1,260 @@
+:root {
+    --bg: #15191d;
+    --surface: #1f242a;
+    --text: #e0e0e0;
+    --text-secondary: #a0a0a0;
+    --accent: #ff4c6d;
+    --accent-hover: #ff6380;
+}
+
+/*CSS Reset*/
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+
+/*Body and Background*/
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    min-height: 100vh;
+
+    background:
+        repeating-linear-gradient(
+            rgba(43, 43, 43, 0.3),
+            rgba(43, 43, 43, 0.3) 1px,
+            transparent 1px,
+            transparent 25px
+        ),
+        repeating-linear-gradient(
+            to right,
+            rgba(43, 43, 43, 0.3),
+            rgba(43, 43, 43, 0.3) 1px,
+            transparent 1px,
+            transparent 25px
+        )
+    var(--bg);
+}
+
+/* Hero section */
+    .hero {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    /** Header with name and toggle switch */
+        .hero-header {
+            position: absolute;
+            top: 1rem;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 1rem;
+            color: var(--text);
+        }
+
+        .header-left {
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .header-right .toggle-icon {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+            margin-right: 0;
+        }
+
+        /* Highlight Mohammed in title */
+        #name {
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        /* Info section with icons below */
+        .hero-info {
+            text-align: left;
+            max-width: 300px;
+            margin-top: 1rem;
+        }
+            /* Bold role in the info section*/
+            .text-role {
+            font-weight: bold;
+            }
+        
+
+/*Text*/
+    h2 {
+        font-size: 2rem;
+        font-weight: lighter;
+        color: var(--text);
+        margin: 1rem;
+        }
+
+    h3 {
+        font-weight: lighter;
+        font-size: 0.9rem;
+        color: var(--text-secondary);
+        margin: 0.4rem 0.4rem 0.4rem 0;
+    }
+
+/* Profile picture */
+    .profile-pic {
+    width: 150px;              
+    height: 150px;
+    border-radius: 50%;        
+    border: 4px solid var(--accent);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 15px rgba(255, 76, 109, 0.5); /* glow effect */
+    margin: 2rem auto;
+    }
+
+/* Link social icons */
+    .profile-pic img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .social-icons {
+        display: flex;
+        gap: 1rem;                  
+        margin-top: 1.5rem;
+    }
+
+    .social-icon {
+        width: 25px;
+        height: 25px;
+        transition: transform 0.2s, filter 0.2s;
+    }
+
+/* Icon */
+    .icon {
+        width: 5%;
+        margin-right: 0.5rem;
+        vertical-align: middle;
+        filter: invert(59%) sepia(74%) saturate(5532%) hue-rotate(324deg) brightness(108%) contrast(106%);
+    }
+
+    .github {
+        width: 26px;
+        height: 26px;
+        filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(125deg) brightness(103%) contrast(103%);
+    }
+
+    .email {
+        filter: invert(59%) sepia(74%) saturate(5532%) hue-rotate(324deg) brightness(108%) contrast(106%);
+    }
+
+
+/* Skill boxes */
+    .section-title {
+        text-align: left;
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: var(--text);
+        margin-bottom: 1rem;
+        margin-left: 0rem;
+    }
+
+    .skills {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        margin: 2rem;
+    }
+
+    .skill-box {
+        background-color: var(--surface);
+        border: 2px solid var(--accent);
+        border-radius: 15px;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .skill-box h3 {
+        color: var(--text);
+        font-size: 1.3rem;
+        font-weight: bolder;
+        margin-bottom: 1rem;
+    }
+
+    .skill-items {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .skill-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.3rem;
+    }
+
+    .skill-icon {
+        width: 40px;
+        height: 40px;
+        transition: transform 0.3s;
+    }
+
+    .skill-icon:hover {
+        transform: scale(1.1);
+    }
+
+    .skill-item span {
+        font-size: 0.9rem;
+        color: var(--text);
+    }
+
+/*Footer*/
+    footer {
+        width: 100%;
+        text-align: center;
+        padding: 1rem 0;
+        color: var(--text-secondary);
+        font-size: 0.9rem;
+        background-color: var(--bg);
+    }
+
+    .footer-line {
+        width: 80%;
+        max-width: 800px;
+        height: 1px;
+        background-color: var(--accent);
+        margin: 0 auto 0.5rem auto; /* centers the line and adds spacing below */
+    }
+
+
+
+@media (min-width: 768px) {
+    /* Tablet styles */
+    nav ul {
+    display: flex;
+    gap: 1rem;
+    }
+    
+    main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+
+
