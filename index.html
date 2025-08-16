@@ -2,42 +2,72 @@
 <html lang="en">
 
 <head>
-    <!--Meta and Title-->
+    <!-- Meta -->
     <meta charset="UTF-8">
     <meta name="author" content="Mohammed Djail">
-    <meta name="description" content="Mohammed Djail's Business Portfolio">
+    <meta name="description"
+        content="Profession portfolio of Mohammed Djail, a Full Stack Developer based in Ottawa, Canada.">
+    <meta name="keywords"
+        content="Mohammed Djail, Full Stack Developer, Java Developer, Portfolio, Ottawa, Canada, Web Development, Software Engineer">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
+    <!-- Open Graph tags for social media sharing -->
+    <meta property="og:title" content="Mohammed Djail's Portfolio">
+    <meta property="og:description"
+        content="Professional portfolio of Mohammed Djail, a Full Stack Developer based in Ottawa, Canada.">
+    <meta property="og:image" content="/android-chrome-512x512.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://djailmohammed.github.io/">
+
+    <!-- Twitter Card for sharing -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mohammed Djail's Portfolio">
+    <meta name="twitter:description"
+        content="Professional portfolio of Mohammed Djail, a Full Stack Developer based in Ottawa, Canada.">
+    <meta name="twitter:image" content="/android-chrome-512x512.png">
+
     <title>Djail Mohammed's Portfolio</title>
 
-    <link rel="stylesheet" type="text/css" href="CSS/style.css">
-    <link rel="icon" type="image/x-icon" href="/Images/leaf-website-icon.png">
+    <!-- Preconnect to external resources for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Stylesheets & Fonts -->
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+
+    <!-- Favicon and Apple Touch Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
 </head>
 
 <body>
-    <div class="main-column">  
-        <section class="hero">  
+    <div class="main-column">
+        <section class="hero">
             <div class="hero-header">
                 <div class="header-left">Mohammed Djail</div>
-                <div class="header-right"><img class="toggle-icon icon" src="Images/moon-stars.svg" alt="Toggle Mode"></div>
+                <div class="header-right"><img class="toggle-icon icon" src="images/icons/moon-stars.svg" alt="Toggle Dark/Light Mode">
+                </div>
             </div>
             <div class="hero-content">
-                <div class="profile-pic"><img src="Images/my-picture.JPG" alt="Mohammed Djail"></div>
+                <div class="profile-pic"><img src="images/socials/my-picture.JPG" alt="Mohammed Djail"></div>
                 <div class="hero-info">
-                    <h2 class="title">Hi, I'm <span id="name">Mohammed</span></h2>
-                    <h3><img class="icon" src="Images/leaf.svg" alt="Maple Leaf">Based in Ottawa, Canada</h3>
-                    <h3><img class="icon" src="Images/language.svg" alt="Languages">English & French Speaker</h3>
-                    <h3 class="text-role"><img class="icon" src="Images/code.svg" alt="Maple Leaf">Full Stack Developer | Java Specialist</h3>
+                    <h2 class="title">Hi, I'm <span class="accent">Mohammed</span></h2>
+                    <h3><img class="icon" src="images/icons/leaf.svg" alt="Maple Leaf">Based in Ottawa, Canada</h3>
+                    <h3><img class="icon" src="images/icons/language.svg" alt="Languages">English & French Speaker</h3>
+                    <h3 class="bold"><img class="icon" src="images/icons/code.svg" alt="Coding Brackets">Full Stack Developer |
+                        Java Specialist</h3>
                     <div class="social-icons">
                         <a href="https://github.com/HDMohammed" target="_blank">
-                            <img class="social-icon github" src="Images/github.svg" alt="GitHub">
+                            <img class="social-icon github" src="images/socials/github.svg" alt="GitHub">
                         </a>
                         <a href="https://www.linkedin.com/in/mohammed-djail-042b10196/" target="_blank">
-                            <img class="social-icon" src="Images/linkedin.svg" alt="LinkedIn">
+                            <img class="social-icon" src="images/socials/linkedin.svg" alt="LinkedIn">
                         </a>
                         <a href="mailto:mohahoussam1@gmail.com">
-                            <img class="social-icon email" src="Images/email.svg" alt="Email">
+                            <img class="social-icon email" src="images/socials/email.svg" alt="Email">
                         </a>
                     </div>
                 </div>
@@ -50,31 +80,31 @@
                 <h3>Backend</h3>
                 <div class="skill-items">
                     <div class="skill-item">
-                        <img class="skill-icon" src="Images/skills/java.svg" alt="Java">
+                        <img class="skill-icon" src="images/skills/java.svg" alt="Java">
                         <span>Java</span>
                     </div>
                     <div class="skill-item">
-                        <img class="skill-icon" src="Images/skills/springboot.svg" alt="Spring Boot">
+                        <img class="skill-icon" src="images/skills/springboot.svg" alt="Spring Boot">
                         <span>SpringBoot</span>
                     </div>
                     <div class="skill-item">
-                        <img class="skill-icon" src="Images/skills/mysql.svg" alt="MySQL">
+                        <img class="skill-icon" src="images/skills/mysql.svg" alt="MySQL">
                         <span>MySQL</span>
                     </div>
                     <div class="skill-item">
-                        <img class="skill-icon" src="Images/skills/postgresql.svg" alt="PostgreSQL">
+                        <img class="skill-icon" src="images/skills/postgresql.svg" alt="PostgreSQL">
                         <span>PostgreSQL</span>
                     </div>
                     <div class="skill-item">
-                        <img class="skill-icon" src="Images/skills/mongodb.svg" alt="MongoDB">
+                        <img class="skill-icon" src="images/skills/mongodb.svg" alt="MongoDB">
                         <span>MongoDB</span>
                     </div>
                     <div class="skill-item">
-                        <img class="skill-icon" src="Images/skills/linux.svg" alt="Linux">
+                        <img class="skill-icon" src="images/skills/linux.svg" alt="Linux">
                         <span>Linux</span>
                     </div>
                     <div class="skill-item">
-                        <img class="skill-icon" src="Images/skills/git.svg" alt="Git">
+                        <img class="skill-icon" src="images/skills/git.svg" alt="Git">
                         <span>Git</span>
                     </div>
                 </div>
@@ -84,39 +114,39 @@
                 <h3>Frontend</h3>
                 <div class="skill-items">
                     <div class="skill-item">
-                        <img class="skill-icon" src="Images/skills/html.svg" alt="HTML">
+                        <img class="skill-icon" src="images/skills/html.svg" alt="HTML">
                         <span>HTML</span>
                     </div>
                     <div class="skill-item">
-                        <img class="skill-icon" src="Images/skills/css.svg" alt="CSS">
+                        <img class="skill-icon" src="images/skills/css.svg" alt="CSS">
                         <span>CSS</span>
                     </div>
                     <div class="skill-item">
-                        <img class="skill-icon" src="Images/skills/javascript.svg" alt="JavaScript">
+                        <img class="skill-icon" src="images/skills/javascript.svg" alt="JavaScript">
                         <span>JavaScript</span>
                     </div>
                 </div>
             </div>
         </section>
-    
+
         <section class="container">
             <h2 class="section-title">Projects</h2>
             <div class="projects-list">
                 <a href="/todo.html" class="project-card" target="_blank">
                     <div class="project-image">
-                        <img src="Images/project.png" alt="Project 1 Screenshot">
+                        <img src="images/projects/project.png" alt="Tran Fleet Project">
                     </div>
                     <div class="project-info">
                         <h3 class="project-title">TranFleet</h3>
                         <div class="project-tech">
-                            <img src="Images/skills/html.svg" alt="HTML">
-                            <img src="Images/skills/css.svg" alt="CSS">
-                            <img src="Images/skills/javascript.svg" alt="JavaScript">
+                            <img src="images/skills/html.svg" alt="HTML">
+                            <img src="images/skills/css.svg" alt="CSS">
+                            <img src="images/skills/javascript.svg" alt="JavaScript">
                         </div>
                         <p class="project-desc">Short description of what the project does or its purpose.</p>
                     </div>
                 </a>
-            <!-- Repeat .project-card for other projects -->
+                <!-- Add more .project-card -->
             </div>
         </section>
 
@@ -125,11 +155,13 @@
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <div class="timeline-date">2023 - <span id="name">Present</span></div>
-                    <div class="timeline-content">
-                        <h3 class="timeline-title">Computer Programming Advanced Diploma</h3>
-                        <p class="timeline-location">Algonquin College | Ottawa</p>
-                        <p class="timeline-desc">Coursework included Object Oriented Programming in Java, Backend and Web development, Database Management (MySQL, MongoDB, Oracle) and the Linux environment</p>
+                    <div class="timeline-date">2023 - <span class="accent"">Present</span></div>
+                    <div class=" timeline-content">
+                            <h3 class="timeline-title">Computer Programming Advanced Diploma</h3>
+                            <p class="timeline-location">Algonquin College | Ottawa</p>
+                            <p class="timeline-desc">Coursework included Object Oriented Programming in Java, Backend
+                                and Web development, Database Management (MySQL, MongoDB, Oracle) and the Linux
+                                environment</p>
                     </div>
                 </div>
                 <div class="timeline-item">
@@ -141,17 +173,14 @@
                         <p class="timeline-desc">Graduated in French speaking program</p>
                     </div>
                 </div>
-                <!-- Add more timeline-item blocks as needed -->
+                <!-- Add more timeline-item -->
             </div>
         </section>
     </div>
 
-    
-
-    <!--Footer with Signature and Date-->
     <footer>
         <div class="footer-line"></div>
-            <p>© 2025 Mohammed Djail. All rights reserved.</p>
+        <p>© 2025 Mohammed Djail. All rights reserved.</p>
     </footer>
 </body>
 
