@@ -49,8 +49,10 @@
         <section class="hero">
             <div class="hero-header">
                 <div class="header-left">Mohammed Djail</div>
-                <div class="header-right"><img id="toggle-icon" class="toggle-icon icon"
-                        src="images/icons/moon-stars.svg" alt="Toggle Dark/Light Mode">
+                <div class="header-right">
+                    <button id="toggle-icon" aria-label="Toggle dark/light mode">
+                        <img class="icon" src="images/icons/moon-stars.svg" alt="Toggle Dark/Light Mode">
+                    </button>
                 </div>
             </div>
             <div class="hero-content">
@@ -201,32 +203,26 @@
         const darkColor = "#15191d";
         const lightColor = "#f7f7f7";
 
-        // Detect system preference on first load
-        if (window.matchMedia('(prefers-color-scheme: light)').matches) {
-            document.body.classList.add('light-mode');
-            document.getElementById('toggle-icon').src = 'images/icons/sun.svg';
-            document.getElementById('toggle-icon').alt = 'Toggle Dark Mode';
-            themeColorMeta.setAttribute("content", lightColor);
-        } else {
-            document.body.classList.remove('light-mode');
-            document.getElementById('toggle-icon').src = 'images/icons/moon-stars.svg';
-            document.getElementById('toggle-icon').alt = 'Toggle Light Mode';
-            themeColorMeta.setAttribute("content", darkColor);
-        }
-
-        // Your toggle code
-        const toggleIcon = document.getElementById('toggle-icon');
+        const toggleButton = document.getElementById('toggle-icon');
+        const toggleImg = toggleButton.querySelector('img');
         const moonSrc = 'images/icons/moon-stars.svg';
         const sunSrc = 'images/icons/sun.svg';
 
         const savedTheme = localStorage.getItem('theme');
-        if (savedTheme) {
-            document.body.classList.toggle('light-mode', savedTheme === 'light');
-        }
+        const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+        const isLight = savedTheme ? savedTheme === 'light' : prefersLight;
 
-        toggleIcon.addEventListener('click', function () {
-            document.body.classList.toggle('light-mode');
-            localStorage.setItem('theme', document.body.classList.contains('light-mode') ? 'light' : 'dark');
+        document.body.classList.toggle('light-mode', isLight);
+        toggleImg.src = isLight ? sunSrc : moonSrc;
+        toggleImg.alt = isLight ? 'Toggle Dark Mode' : 'Toggle Light Mode';
+        themeColorMeta.setAttribute("content", isLight ? lightColor : darkColor);
+
+        toggleButton.addEventListener('click', () => {
+            const isLightNow = document.body.classList.toggle('light-mode');
+            localStorage.setItem('theme', isLightNow ? 'light' : 'dark');
+            toggleImg.src = isLightNow ? sunSrc : moonSrc;
+            toggleImg.alt = isLightNow ? 'Toggle Dark Mode' : 'Toggle Light Mode';
+            themeColorMeta.setAttribute("content", isLightNow ? lightColor : darkColor);
         });
     </script>
 </body>

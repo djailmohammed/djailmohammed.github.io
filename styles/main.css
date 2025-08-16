@@ -22,6 +22,7 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    transition: background-color 0.3s, color 0.3s;
     background:
         repeating-linear-gradient(rgba(255, 99, 128, 0.1),
             rgba(255, 99, 128, 0.1) 1px,
@@ -67,7 +68,16 @@ body.light-mode {
     font-size: 1.2rem;
 }
 
-.header-right .toggle-icon {
+#toggle-icon {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    box-shadow: none;
+}
+
+#toggle-icon img {
     width: 25px;
     height: 25px;
     cursor: pointer;
@@ -75,7 +85,7 @@ body.light-mode {
     transition: transform 0.2s, filter 0.2s;
 }
 
-.header-right .toggle-icon:hover {
+#toggle-icon img:hover {
     transform: scale(1.3);
 }
 
