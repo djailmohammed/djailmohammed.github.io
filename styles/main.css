@@ -34,6 +34,15 @@ body {
             transparent 50px) var(--bg);
 }
 
+body.light-mode {
+    --bg: #f7f7f7;
+    --surface: #ffffff;
+    --text: #222;
+    --text-secondary: #555;
+    --accent: #ff4c6d;
+    --accent-hover: #ff6380;
+}
+
 /*Main container*/
 .main-column {
     max-width: 400px;
@@ -59,10 +68,15 @@ body {
 }
 
 .header-right .toggle-icon {
-    width: 24px;
-    height: 24px;
+    width: 25px;
+    height: 25px;
     cursor: pointer;
     margin-right: 0;
+    transition: transform 0.2s, filter 0.2s;
+}
+
+.header-right .toggle-icon:hover {
+    transform: scale(1.3);
 }
 
 /* Accent Highlight */
@@ -132,6 +146,10 @@ h3 {
     transition: transform 0.2s, filter 0.2s;
 }
 
+.social-icon:hover {
+    transform: scale(1.4);
+}
+
 /* Icons */
 .icon {
     width: 5%;
@@ -144,6 +162,10 @@ h3 {
     width: 31px;
     height: 31px;
     filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(125deg) brightness(103%) contrast(103%);
+}
+
+body.light-mode .github {
+    filter: none;
 }
 
 .email {
@@ -268,12 +290,13 @@ h3 {
 }
 
 .project-tech img {
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    height: 40px;
 }
 
 .project-desc {
     color: var(--text-secondary);
+    font-size: 1.1rem;
 }
 
 /*Timeline section*/
@@ -354,6 +377,11 @@ footer {
 @media (min-width: 825px) {
     .main-column {
         max-width: 800px;
+    }
+
+    .header-right .toggle-icon {
+        width: 35px;
+        height: 35px;
     }
 
     h2 {

@@ -6,10 +6,11 @@
     <meta charset="UTF-8">
     <meta name="author" content="Mohammed Djail">
     <meta name="description"
-        content="Profession portfolio of Mohammed Djail, a Full Stack Developer based in Ottawa, Canada.">
+        content="Professional portfolio of Mohammed Djail, a Full Stack Developer based in Ottawa, Canada.">
     <meta name="keywords"
         content="Mohammed Djail, Full Stack Developer, Java Developer, Portfolio, Ottawa, Canada, Web Development, Software Engineer">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#15191d">
 
     <!-- Open Graph tags for social media sharing -->
     <meta property="og:title" content="Mohammed Djail's Portfolio">
@@ -48,7 +49,8 @@
         <section class="hero">
             <div class="hero-header">
                 <div class="header-left">Mohammed Djail</div>
-                <div class="header-right"><img class="toggle-icon icon" src="images/icons/moon-stars.svg" alt="Toggle Dark/Light Mode">
+                <div class="header-right"><img id="toggle-icon" class="toggle-icon icon"
+                        src="images/icons/moon-stars.svg" alt="Toggle Dark/Light Mode">
                 </div>
             </div>
             <div class="hero-content">
@@ -57,7 +59,8 @@
                     <h2 class="title">Hi, I'm <span class="accent">Mohammed</span></h2>
                     <h3><img class="icon" src="images/icons/leaf.svg" alt="Maple Leaf">Based in Ottawa, Canada</h3>
                     <h3><img class="icon" src="images/icons/language.svg" alt="Languages">English & French Speaker</h3>
-                    <h3 class="bold"><img class="icon" src="images/icons/code.svg" alt="Coding Brackets">Full Stack Developer |
+                    <h3 class="bold"><img class="icon" src="images/icons/code.svg" alt="Coding Brackets">Full Stack
+                        Developer |
                         Java Specialist</h3>
                     <div class="social-icons">
                         <a href="https://github.com/HDMohammed" target="_blank">
@@ -132,18 +135,28 @@
         <section class="container">
             <h2 class="section-title">Projects</h2>
             <div class="projects-list">
-                <a href="/todo.html" class="project-card" target="_blank">
+                <a class="project-card" target="_blank">
                     <div class="project-image">
-                        <img src="images/projects/project.png" alt="Tran Fleet Project">
+                        <img src="images/projects/project.png"
+                            alt="Screenshot of TranFleet public transit fleet management login page">
                     </div>
                     <div class="project-info">
                         <h3 class="project-title">TranFleet</h3>
                         <div class="project-tech">
+                            <img src="images/skills/java.svg" alt="Java">
+                            <img src="images/skills/mysql.svg" alt="MySQL">
                             <img src="images/skills/html.svg" alt="HTML">
                             <img src="images/skills/css.svg" alt="CSS">
                             <img src="images/skills/javascript.svg" alt="JavaScript">
+                            <img src="images/skills/git.svg" alt="Git">
                         </div>
-                        <p class="project-desc">Short description of what the project does or its purpose.</p>
+                        <p class="project-desc">Public Transit Fleet Management System designed for managing vehicles
+                            with authenticated, role-based access for managers and operators.<br><br>
+                            The project streamlines the management of public transit vehicles by providing tools for
+                            tracking, scheduling, and reporting.<br><br>
+                            It is built using the MVC architecture, JSP for dynamic content rendering, and MySQL for
+                            persistent data storage.
+                        </p>
                     </div>
                 </a>
                 <!-- Add more .project-card -->
@@ -155,13 +168,13 @@
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
-                    <div class="timeline-date">2023 - <span class="accent"">Present</span></div>
+                    <div class="timeline-date">2023 - <span class="accent">Present</span></div>
                     <div class=" timeline-content">
-                            <h3 class="timeline-title">Computer Programming Advanced Diploma</h3>
-                            <p class="timeline-location">Algonquin College | Ottawa</p>
-                            <p class="timeline-desc">Coursework included Object Oriented Programming in Java, Backend
-                                and Web development, Database Management (MySQL, MongoDB, Oracle) and the Linux
-                                environment</p>
+                        <h3 class="timeline-title">Computer Programming Advanced Diploma</h3>
+                        <p class="timeline-location">Algonquin College | Ottawa</p>
+                        <p class="timeline-desc">Coursework included Object Oriented Programming in Java, Backend
+                            and Web development, Database Management (MySQL, MongoDB, Oracle) and the Linux
+                            environment</p>
                     </div>
                 </div>
                 <div class="timeline-item">
@@ -182,6 +195,40 @@
         <div class="footer-line"></div>
         <p>© 2025 Mohammed Djail. All rights reserved.</p>
     </footer>
+
+    <script>
+        const themeColorMeta = document.querySelector('meta[name="theme-color"]');
+        const darkColor = "#15191d";
+        const lightColor = "#f7f7f7";
+
+        // Detect system preference on first load
+        if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+            document.body.classList.add('light-mode');
+            document.getElementById('toggle-icon').src = 'images/icons/sun.svg';
+            document.getElementById('toggle-icon').alt = 'Toggle Dark Mode';
+            themeColorMeta.setAttribute("content", lightColor);
+        } else {
+            document.body.classList.remove('light-mode');
+            document.getElementById('toggle-icon').src = 'images/icons/moon-stars.svg';
+            document.getElementById('toggle-icon').alt = 'Toggle Light Mode';
+            themeColorMeta.setAttribute("content", darkColor);
+        }
+
+        // Your toggle code
+        const toggleIcon = document.getElementById('toggle-icon');
+        const moonSrc = 'images/icons/moon-stars.svg';
+        const sunSrc = 'images/icons/sun.svg';
+
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            document.body.classList.toggle('light-mode', savedTheme === 'light');
+        }
+
+        toggleIcon.addEventListener('click', function () {
+            document.body.classList.toggle('light-mode');
+            localStorage.setItem('theme', document.body.classList.contains('light-mode') ? 'light' : 'dark');
+        });
+    </script>
 </body>
 
 </html>
