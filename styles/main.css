@@ -207,6 +207,7 @@ body.light-mode .github {
     border-radius: 15px;
     padding: 1rem;
     text-align: center;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .skill-box h3 {
@@ -266,7 +267,7 @@ body.light-mode .github {
     box-shadow: 0 4px 16px rgba(43, 43, 43, 0.12);
     overflow: hidden;
     text-decoration: none;
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s, color 0.3s;
 }
 
 .project-card:hover {
@@ -347,6 +348,7 @@ body.light-mode .github {
     border-radius: 12px;
     box-shadow: 0 2px 12px rgba(43, 43, 43, 0.08);
     flex: 1;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .timeline-title {
